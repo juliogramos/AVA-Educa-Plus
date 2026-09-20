@@ -44,6 +44,30 @@ h6 {
     max-width: 1200px;
 }
 
+/* COMPONENTES */
+.row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-single);
+}
+
+#spinner {
+    animation: rotate 3s linear infinite;
+    width: 30px;
+    height: auto;
+    color: var(--color-accent);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* ESTILOS INDEX */
 .index {
     height: 90vh;
