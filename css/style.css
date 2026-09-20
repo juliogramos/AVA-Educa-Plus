@@ -1,0 +1,48 @@
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/colors/ */
+    --color-primary: hsl(70, 50%, 90%);
+    --color-secondary: hsl(70, 50%, 10%);
+    --color-tertiary: hsl(10, 80%, 20%);
+    --color-accent: hsl(130, 80%, 20%);
+}
+
+/* ESTILOS PRINCIPAIS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: var(--color-secondary);
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "DM Serif Display", serif;
+}
+
+/* CORES PARA SPAN */
+.cor-primaria {
+    color: var(--color-primary);
+}
+
+.cor-secundaria {
+    color: var(--color-secondary);
+}
+
+.cor-terciaria {
+    color: var(--color-tertiary);
+}
+
+.cor-destaque {
+    color: var(--color-accent);
+}
