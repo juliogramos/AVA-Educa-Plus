@@ -5,6 +5,14 @@
     --color-secondary: hsl(70, 50%, 10%);
     --color-tertiary: hsl(10, 80%, 20%);
     --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --border-radius: 16px;
+
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
 }
 
 /* ESTILOS PRINCIPAIS */
@@ -16,7 +24,8 @@
 }
 
 body {
-    background-color: white;
+    background: linear-gradient(0deg, #fff 70%, var(--color-primary) 100%);
+    background-repeat: no-repeat;
     color: var(--color-secondary);
     font-family: "Open Sans", sans-serif;
 }
@@ -28,6 +37,27 @@ h4,
 h5,
 h6 {
     font-family: "DM Serif Display", serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* ESTILOS INDEX */
+.index {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-double);
+    padding-top: var(--space-quadruple);
+    gap: var(--space-double);
+}
+
+.index h1 {
+    text-align: center;
 }
 
 /* CORES PARA SPAN */
