@@ -1,0 +1,72 @@
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/colors/ */
+    --color-primary: hsl(70, 50%, 90%);
+    --color-secondary: hsl(70, 50%, 10%);
+    --color-tertiary: hsl(10, 80%, 20%);
+    --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --border-radius: 24px;
+
+    --space-half: 4px;
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.login-card {
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--space-double);
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-double);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-single);
+}
+
+input {
+    padding: var(--space-half);
+}
+
+button {
+    width: fit-content;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    border-radius: calc(var(--border-radius) / 4);
+    padding: var(--space-single) var(--space-double);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+button:focus {
+    outline-color: var(--color-tertiary);
+}
+
+a {
+    color: var(--color-tertiary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}

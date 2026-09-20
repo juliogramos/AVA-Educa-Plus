@@ -7,8 +7,9 @@
     --color-accent: hsl(130, 80%, 20%);
 
     /* Medidas padrão */
-    --border-radius: 16px;
+    --border-radius: 24px;
 
+    --space-half: 4px;
     --space-single: 8px;
     --space-double: 16px;
     --space-triple: 24px;
@@ -21,6 +22,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+*:focus {
+    outline-color: var(--color-accent);
 }
 
 body {
@@ -42,6 +47,10 @@ h6 {
 .container {
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.shadow-default {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
 }
 
 /* COMPONENTES */
@@ -68,8 +77,8 @@ h6 {
     }
 }
 
-/* ESTILOS INDEX */
-.index {
+/* LAYOUTS COMUNS */
+.main-centro {
     height: 90vh;
     display: flex;
     flex-direction: column;
