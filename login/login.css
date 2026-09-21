@@ -24,6 +24,8 @@ h1 {
     border: 2px solid var(--color-secondary);
     border-radius: var(--border-radius);
     padding: var(--space-double);
+    max-width: 300px;
+    width: 100%;
 }
 
 .login-card form {
@@ -69,4 +71,8 @@ a {
 
 a:hover {
     color: var(--color-secondary);
+}
+
+#erro {
+    text-align: center;
 }

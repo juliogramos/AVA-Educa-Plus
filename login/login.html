@@ -16,9 +16,6 @@
         <!-- Estilos -->
         <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="./login.css" />
-
-        <!-- Scripts -->
-        <script src="login.js" defer></script>
     </head>
     <body>
         <main class="main-centro">
@@ -28,13 +25,20 @@
 
                     <div class="form-row">
                         <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" />
+                        <input type="email" name="email" id="email" required />
                     </div>
 
                     <div class="form-row">
                         <label for="senha">Senha: </label>
-                        <input type="password" name="senha" id="senha" />
+                        <input
+                            type="password"
+                            name="senha"
+                            id="senha"
+                            required
+                        />
                     </div>
+
+                    <p id="erro" class="cor-terciaria"></p>
 
                     <div class="form-row">
                         <button type="submit">Entrar</button>
@@ -43,5 +47,6 @@
                 </form>
             </div>
         </main>
+        <script src="login.js" type="module"></script>
     </body>
 </html>
