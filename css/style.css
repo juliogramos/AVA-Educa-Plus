@@ -5,6 +5,15 @@
     --color-secondary: hsl(70, 50%, 10%);
     --color-tertiary: hsl(10, 80%, 20%);
     --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --border-radius: 24px;
+
+    --space-half: 4px;
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
 }
 
 /* ESTILOS PRINCIPAIS */
@@ -15,8 +24,13 @@
     padding: 0;
 }
 
+*:focus {
+    outline-color: var(--color-accent);
+}
+
 body {
-    background-color: white;
+    background: linear-gradient(0deg, #fff 70%, var(--color-primary) 100%);
+    background-repeat: no-repeat;
     color: var(--color-secondary);
     font-family: "Open Sans", sans-serif;
 }
@@ -30,7 +44,56 @@ h6 {
     font-family: "DM Serif Display", serif;
 }
 
-/* CORES PARA SPAN */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.shadow-default {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+/* COMPONENTES */
+.row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-single);
+}
+
+#spinner {
+    animation: rotate 3s linear infinite;
+    width: 30px;
+    height: auto;
+    color: var(--color-accent);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* LAYOUTS COMUNS */
+.main-centro {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-double);
+    padding-top: var(--space-quadruple);
+    gap: var(--space-double);
+}
+
+.index h1 {
+    text-align: center;
+}
+
+/* CORES PARA TEXTO */
 .cor-primaria {
     color: var(--color-primary);
 }
