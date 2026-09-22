@@ -38,16 +38,28 @@ main {
     padding: var(--space-double);
 }
 
+/* CARD CONTAINER */
+#card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-triple);
+}
+
 /* CARD */
 .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: var(--space-double);
-    width: fit-content;
     border: 2px solid var(--color-secondary);
     border-radius: var(--border-radius);
     padding: var(--space-double);
     background-color: var(--color-primary);
+    width: 300px;
+    height: 170px;
 }
 
 .card-row {
