@@ -34,32 +34,25 @@
             </aside>
 
             <main class="shadow-default">
-                <div class="card shadow-default">
-                    <h2 class>Desenvolvimento Web</h2>
-                    <div class="card-row">
-                        <div>
-                            <p>Início: 2026-02-02</p>
-                            <p>Fim: 2026-04-30</p>
-                        </div>
-                        <div class="card-icon shadow-default">
-                            <i data-lucide="book-open-text"></i>
-                        </div>
-                    </div>
-                </div>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
-                voluptatibus dignissimos libero autem reprehenderit doloremque
-                eligendi laboriosam! Illum distinctio maiores, obcaecati
-                deserunt fuga ex sapiente magnam accusamus, quae quidem, optio
-                dignissimos laborum repudiandae. Obcaecati debitis, est expedita
-                officia laboriosam, fugit laudantium consequuntur quasi cumque
-                laborum provident sit amet, vitae quis?
+                <section id="card-container"></section>
             </main>
         </div>
 
         <!-- Scripts para incluir os ícones Lucide -->
         <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
-        <script>
-            lucide.createIcons();
-        </script>
+        <!-- O createIcons vai ser executado no script de criar os cards 
+         já que eles são criados após o carregamento inicial da página -->
+
+        <!-- Moment para formatar as datas igual ao AVA -->
+        <!-- Vai ser usado em dashboard.js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.31.0/moment.min.js"
+            integrity="sha512-iJIt5wigccZYA4F3G8kWt8H0r43JDWpvBweaGct6QsveuU4zmyP6VX2EXMfSfA/Z80b1PfHUNLioFfY1Z55cCg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- Script para fazer os cards -->
+        <script src="./dashboard.js" type="module"></script>
     </body>
 </html>
