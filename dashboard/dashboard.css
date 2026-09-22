@@ -38,6 +38,11 @@ main {
     padding: var(--space-double);
 }
 
+h1 {
+    text-align: center;
+    margin: var(--space-single);
+}
+
 /* CARD CONTAINER */
 #card-container {
     display: flex;
