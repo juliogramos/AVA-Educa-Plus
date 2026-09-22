@@ -43,6 +43,7 @@ h4,
 h5,
 h6 {
     font-family: "DM Serif Display", serif;
+    color: var(--color-secondary);
 }
 
 .container {
