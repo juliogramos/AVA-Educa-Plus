@@ -1,0 +1,93 @@
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/colors/ */
+    --color-primary: hsl(70, 50%, 90%);
+    --color-secondary: hsl(70, 50%, 10%);
+    --color-tertiary: hsl(10, 80%, 20%);
+    --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --max-width: 1400px;
+    --border-radius: 24px;
+    --header-height: 50px;
+
+    --space-half: 4px;
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
+}
+
+/* LAYOUT */
+.container {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: var(--space-double);
+    margin-top: calc(var(--header-height) + var(--space-double));
+}
+
+.container li {
+    list-style: none;
+}
+
+aside,
+main {
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: var(--space-double);
+}
+
+h1 {
+    text-align: center;
+    margin: var(--space-single);
+}
+
+/* CARD CONTAINER */
+#card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-triple);
+}
+
+/* CARD */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: var(--space-double);
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    padding: var(--space-double);
+    background-color: var(--color-primary);
+    width: 300px;
+    height: 170px;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 5px solid var(--color-accent);
+}
+
+.card-icon svg {
+    transition: all 0.2s ease-in-out;
+}
+
+.card-icon svg:hover {
+    transform: scale(1.2);
+    color: var(--color-tertiary);
+}

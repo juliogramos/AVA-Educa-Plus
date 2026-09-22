@@ -7,6 +7,7 @@
     --color-accent: hsl(130, 80%, 20%);
 
     /* Medidas padrão */
+    --max-width: 1400px;
     --border-radius: 24px;
 
     --space-half: 4px;
@@ -42,11 +43,12 @@ h4,
 h5,
 h6 {
     font-family: "DM Serif Display", serif;
+    color: var(--color-secondary);
 }
 
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: var(--max-width);
 }
 
 .shadow-default {

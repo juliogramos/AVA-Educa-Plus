@@ -6,6 +6,8 @@ export function listarCursos(usuario) {
             (curso) => curso.emailProfessor == usuario.email,
         );
 
+        console.log(cursosFiltrados);
+
         if (cursosFiltrados.length > 0) {
             resolve(cursosFiltrados);
         } else {
