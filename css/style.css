@@ -9,6 +9,7 @@
     /* Medidas padrão */
     --max-width: 1400px;
     --border-radius: 24px;
+    --header-height: 50px;
 
     --space-half: 4px;
     --space-single: 8px;
@@ -95,8 +96,46 @@ h6 {
     text-align: center;
 }
 
-/* MENU LATERAL */
+/* CABEÇALHO */
+header {
+    background-color: white;
+    border-bottom: 1px solid var(--color-secondary);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-single) var(--space-quadruple);
+}
 
+header h2 {
+    font-size: 30px;
+    color: var(--color-accent);
+}
+
+header .user-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-single);
+    align-items: center;
+}
+
+header .user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-accent);
+}
+
+header .user-icon svg {
+    height: 40px;
+    width: 40px;
+}
+
+/* MENU LATERAL */
 aside {
     border: 1px solid var(--color-primary);
     border-radius: var(--border-radius);

@@ -7,8 +7,6 @@ function criarBotaoNaNav(texto, func, desabilitado, nav) {
     nav.appendChild(botao);
 }
 
-const container = document.getElementsByClassName("container")[0];
-
 const menuLateral = document.createElement("aside");
 menuLateral.classList.add("shadow-default");
 
@@ -41,4 +39,4 @@ criarBotaoNaNav(
 );
 
 menuLateral.appendChild(nav);
-container.appendChild(menuLateral);
+document.getElementsByClassName("container")[0].appendChild(menuLateral);
