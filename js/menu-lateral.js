@@ -7,36 +7,42 @@ function criarBotaoNaNav(texto, func, desabilitado, nav) {
     nav.appendChild(botao);
 }
 
-const menuLateral = document.createElement("aside");
-menuLateral.classList.add("shadow-default");
+function criaMenuLateral() {
+    const container = document.getElementsByClassName("container")[0];
 
-const nav = document.createElement("nav");
+    const menuLateral = document.createElement("aside");
+    menuLateral.classList.add("shadow-default");
 
-criarBotaoNaNav(
-    "Dashboard",
-    () => navigation.navigate("../dashboard/dashboard.html"),
-    false,
-    nav,
-);
+    const nav = document.createElement("nav");
 
-criarBotaoNaNav("Cursos", undefined, true, nav);
+    criarBotaoNaNav(
+        "Dashboard",
+        () => navigation.navigate("../dashboard/dashboard.html"),
+        false,
+        nav,
+    );
 
-criarBotaoNaNav(
-    "Cadastro de Alunos",
-    () => navigation.navigate("../cadastro-aluno/cadastro-aluno.html"),
-    false,
-    nav,
-);
+    criarBotaoNaNav("Cursos", undefined, true, nav);
 
-criarBotaoNaNav(
-    "Sair",
-    () => {
-        sessionStorage.removeItem("usuario");
-        navigation.navigate("../login/login.html");
-    },
-    false,
-    nav,
-);
+    criarBotaoNaNav(
+        "Cadastro de Alunos",
+        () => navigation.navigate("../cadastro-aluno/cadastro-aluno.html"),
+        false,
+        nav,
+    );
 
-menuLateral.appendChild(nav);
-document.getElementsByClassName("container")[0].appendChild(menuLateral);
+    criarBotaoNaNav(
+        "Sair",
+        () => {
+            sessionStorage.removeItem("usuario");
+            navigation.navigate("../login/login.html");
+        },
+        false,
+        nav,
+    );
+
+    menuLateral.appendChild(nav);
+    container.appendChild(menuLateral);
+}
+
+criaMenuLateral();
