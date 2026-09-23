@@ -22,8 +22,8 @@
 .container {
     max-width: var(--max-width);
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: var(--space-double);
+    grid-template-columns: 4fr 1fr;
+    gap: var(--space-quadruple);
     margin-top: calc(var(--header-height) + var(--space-double));
 }
 
@@ -31,11 +31,11 @@
     list-style: none;
 }
 
-aside,
 main {
     border: 1px solid var(--color-primary);
     border-radius: var(--border-radius);
     padding: var(--space-double);
+    background-color: white;
 }
 
 h1 {
