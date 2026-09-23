@@ -9,7 +9,6 @@
     /* Medidas padrão */
     --max-width: 1400px;
     --border-radius: 24px;
-    --header-height: 50px;
 
     --space-half: 4px;
     --space-single: 8px;
@@ -24,7 +23,7 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: var(--space-quadruple);
-    margin-top: calc(var(--header-height) + var(--space-double));
+    margin-top: var(--space-double);
 }
 
 .container li {
