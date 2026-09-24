@@ -41,7 +41,79 @@
         <div class="container">
             <!-- Barra lateral inserida dinâmicamente aqui -->
 
-            <main class="shadow-default"></main>
+            <main class="shadow-default">
+                <h1>Cadastro de Alunos</h1>
+                <form>
+                    <label for="nome">Nome Completo: </label>
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        required
+                        min="4"
+                        max="80"
+                    />
+
+                    <label for="genero">Gênero: </label>
+                    <select name="genero" id="genero" required>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="data">Data de Nascimento: </label>
+                    <input type="date" name="data" id="data" required />
+
+                    <label for="cpf">CPF: </label>
+                    <input type="number" name="cpf" id="cpf" required />
+
+                    <label for="telefone">Telefone: </label>
+                    <input type="tel" name="telefone" id="telefone" required />
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required />
+
+                    <label for="cep">CEP: </label>
+                    <input type="number" name="cep" id="cep" required />
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <label for="cidade">Cidade: </label>
+                        <input type="text" name="cidade" id="cidade" required />
+
+                        <label for="estado">Estado: </label>
+                        <input type="text" name="estado" id="estado" required />
+
+                        <label for="logradouro">Logradouro: </label>
+                        <input
+                            type="text"
+                            name="logradouro"
+                            id="logradouro"
+                            required
+                        />
+
+                        <label for="numero">Número: </label>
+                        <input
+                            type="number"
+                            name="numero"
+                            id="numero"
+                            required
+                        />
+
+                        <label for="complemento">Complemento: </label>
+                        <input
+                            type="text"
+                            name="complemento"
+                            id="complemento"
+                        />
+
+                        <label for="bairro">Bairro: </label>
+                        <input type="text" name="bairro" id="bairro" required />
+                    </fieldset>
+                    <button type="submit">Salvar</button>
+                </form>
+            </main>
         </div>
     </body>
 </html>
