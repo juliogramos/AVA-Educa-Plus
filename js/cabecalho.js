@@ -36,3 +36,4 @@ function criaCabecalho() {
 }
 
 criaCabecalho();
+lucide.createIcons();

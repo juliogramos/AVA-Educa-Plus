@@ -1,0 +1,43 @@
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/colors/ */
+    --color-primary: hsl(70, 50%, 90%);
+    --color-secondary: hsl(70, 50%, 10%);
+    --color-tertiary: hsl(10, 80%, 20%);
+    --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --max-width: 1400px;
+    --border-radius: 24px;
+
+    --space-half: 4px;
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
+}
+
+/* LAYOUT */
+.container {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: var(--space-quadruple);
+    margin-top: var(--space-double);
+}
+
+.container li {
+    list-style: none;
+}
+
+main {
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding: var(--space-double);
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: var(--space-single);
+}
