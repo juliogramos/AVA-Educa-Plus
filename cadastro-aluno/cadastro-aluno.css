@@ -41,3 +41,60 @@ h1 {
     text-align: center;
     margin: var(--space-single);
 }
+
+/* FORMULÁRIO */
+.required {
+    color: var(--color-tertiary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-double);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-double);
+    width: 100%;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-single);
+}
+
+.input-div input,
+.input-div select {
+    padding: var(--space-single);
+    max-width: 500px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-double);
+    padding: var(--space-double);
+}
+
+.submit-button {
+    width: fit-content;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    border-radius: calc(var(--border-radius) / 4);
+    padding: var(--space-single) var(--space-double);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--color-secondary);
+}
+
+.submit-button:focus {
+    outline-color: var(--color-tertiary);
+}

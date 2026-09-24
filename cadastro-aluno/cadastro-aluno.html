@@ -44,74 +44,174 @@
             <main class="shadow-default">
                 <h1>Cadastro de Alunos</h1>
                 <form>
-                    <label for="nome">Nome Completo: </label>
-                    <input
-                        type="text"
-                        name="nome"
-                        id="nome"
-                        required
-                        min="4"
-                        max="80"
-                    />
+                    <div class="form-grid">
+                        <fieldset class="form-column">
+                            <legend>Dados Básicos</legend>
 
-                    <label for="genero">Gênero: </label>
-                    <select name="genero" id="genero" required>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
-                    </select>
+                            <div class="input-div">
+                                <label for="nome"
+                                    ><span class="required">* </span>Nome
+                                    Completo:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    id="nome"
+                                    required
+                                    min="4"
+                                    max="80"
+                                />
+                            </div>
 
-                    <label for="data">Data de Nascimento: </label>
-                    <input type="date" name="data" id="data" required />
+                            <div class="input-div">
+                                <label for="genero"
+                                    ><span class="required">* </span>Gênero:
+                                </label>
+                                <select name="genero" id="genero" required>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
 
-                    <label for="cpf">CPF: </label>
-                    <input type="number" name="cpf" id="cpf" required />
+                            <div class="input-div">
+                                <label for="data"
+                                    ><span class="required">* </span>Data de
+                                    Nascimento:
+                                </label>
+                                <input
+                                    type="date"
+                                    name="data"
+                                    id="data"
+                                    required
+                                />
+                            </div>
 
-                    <label for="telefone">Telefone: </label>
-                    <input type="tel" name="telefone" id="telefone" required />
+                            <div class="input-div">
+                                <label for="cpf"
+                                    ><span class="required">* </span>CPF:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="cpf"
+                                    id="cpf"
+                                    required
+                                />
+                            </div>
 
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" required />
+                            <div class="input-div">
+                                <label for="telefone"
+                                    ><span class="required">* </span>Telefone:
+                                </label>
+                                <input
+                                    type="tel"
+                                    name="telefone"
+                                    id="telefone"
+                                    required
+                                />
+                            </div>
 
-                    <label for="cep">CEP: </label>
-                    <input type="number" name="cep" id="cep" required />
+                            <div class="input-div">
+                                <label for="email"
+                                    ><span class="required">* </span>Email:
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                />
+                            </div>
 
-                    <fieldset>
-                        <legend>Endereço</legend>
+                            <div class="input-div">
+                                <label for="cep"
+                                    ><span class="required">* </span>CEP:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="cep"
+                                    id="cep"
+                                    required
+                                />
+                            </div>
 
-                        <label for="cidade">Cidade: </label>
-                        <input type="text" name="cidade" id="cidade" required />
+                            <p class="msg"></p>
+                        </fieldset>
 
-                        <label for="estado">Estado: </label>
-                        <input type="text" name="estado" id="estado" required />
+                        <fieldset class="form-column">
+                            <legend>Endereço</legend>
 
-                        <label for="logradouro">Logradouro: </label>
-                        <input
-                            type="text"
-                            name="logradouro"
-                            id="logradouro"
-                            required
-                        />
+                            <div class="input-div">
+                                <label for="cidade"
+                                    ><span class="required">* </span>Cidade:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="cidade"
+                                    id="cidade"
+                                    required
+                                />
+                            </div>
 
-                        <label for="numero">Número: </label>
-                        <input
-                            type="number"
-                            name="numero"
-                            id="numero"
-                            required
-                        />
+                            <div class="input-div">
+                                <label for="estado"
+                                    ><span class="required">* </span>Estado:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="estado"
+                                    id="estado"
+                                    required
+                                />
+                            </div>
 
-                        <label for="complemento">Complemento: </label>
-                        <input
-                            type="text"
-                            name="complemento"
-                            id="complemento"
-                        />
+                            <div class="input-div">
+                                <label for="logradouro"
+                                    ><span class="required">* </span>Logradouro:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="logradouro"
+                                    id="logradouro"
+                                    required
+                                />
+                            </div>
 
-                        <label for="bairro">Bairro: </label>
-                        <input type="text" name="bairro" id="bairro" required />
-                    </fieldset>
-                    <button type="submit">Salvar</button>
+                            <div class="input-div">
+                                <label for="numero"
+                                    ><span class="required">* </span>Número:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="numero"
+                                    id="numero"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="complemento">Complemento: </label>
+                                <input
+                                    type="text"
+                                    name="complemento"
+                                    id="complemento"
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="bairro"
+                                    ><span class="required">* </span>Bairro:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="bairro"
+                                    id="bairro"
+                                    required
+                                />
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="submit-button">Salvar</button>
                 </form>
             </main>
         </div>
