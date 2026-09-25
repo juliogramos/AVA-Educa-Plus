@@ -58,8 +58,8 @@
                                     name="nome"
                                     id="nome"
                                     required
-                                    min="4"
-                                    max="80"
+                                    minlength="4"
+                                    maxlength="80"
                                 />
                             </div>
 
@@ -104,7 +104,7 @@
                                     ><span class="required">* </span>Telefone:
                                 </label>
                                 <input
-                                    type="tel"
+                                    type="number"
                                     name="telefone"
                                     id="telefone"
                                     required
@@ -135,7 +135,7 @@
                                 />
                             </div>
 
-                            <p class="msg"></p>
+                            <p id="msg-cep"></p>
                         </fieldset>
 
                         <fieldset class="form-column">
@@ -211,9 +211,15 @@
                             </div>
                         </fieldset>
                     </div>
+
+                    <p id="msg"></p>
+
                     <button type="submit" class="submit-button">Salvar</button>
                 </form>
             </main>
         </div>
+
+        <!-- Script para a validação e envio do formulário -->
+        <script type="module" src="./cadastro-aluno.js"></script>
     </body>
 </html>
