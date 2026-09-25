@@ -48,8 +48,20 @@ export class Aluno {
         this.#bairro = bairro;
     }
 
-    // Pelo que eu entendi só o nome vai ser utilizado após o cadastro.
-    getNome() {
-        return this.#nome;
+    // Isso não vai ser utilizado no site, é só pra debugar
+    logInfo() {
+        console.log(`Nome: ${this.#nome}`);
+        console.log(`Gênero: ${this.#genero}`);
+        console.log(`Data de Nascimento: ${this.#dataNascimento}`);
+        console.log(`CPF: ${this.#cpf}`);
+        console.log(`Telefone: ${this.#telefone}`);
+        console.log(`Email: ${this.#email}`);
+        console.log(`CEP: ${this.#cep}`);
+        console.log(`Cidade: ${this.#cidade}`);
+        console.log(`Estado: ${this.#estado}`);
+        console.log(`Logradouro: ${this.#logradouro}`);
+        console.log(`Número: ${this.#numero}`);
+        console.log(`Complemento: ${this.#complemento}`);
+        console.log(`Bairro: ${this.#bairro}`);
     }
 }
