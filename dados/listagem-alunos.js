@@ -1,3 +1,5 @@
+import { Aluno } from "../js/Aluno.js";
+
 const alunos = [
     {
         id: 1,
@@ -31,4 +33,30 @@ const alunos = [
         complemento: "Casa",
         bairro: "Centro",
     },
-];
+].map(
+    (aluno) =>
+        new Aluno(
+            aluno.id,
+            aluno.nome,
+            aluno.genero,
+            aluno.dataNascimento,
+            aluno.cpf,
+            aluno.telefone,
+            aluno.email,
+            aluno.cep,
+            aluno.cidade,
+            aluno.estado,
+            aluno.logradouro,
+            aluno.numero,
+            aluno.complemento,
+            aluno.bairro,
+        ),
+);
+
+export function listarAlunos() {
+    alunos.forEach((aluno) => {
+        console.log("----------");
+        aluno.logInfo();
+        console.log("----------");
+    });
+}
