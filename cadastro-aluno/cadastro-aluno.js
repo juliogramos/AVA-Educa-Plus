@@ -18,6 +18,28 @@ const bairro = document.getElementById("bairro");
 const msg = document.getElementById("msg");
 const msgCep = document.getElementById("msg-cep");
 
+async function consultarCEP(cep) {
+    let enderecoCep;
+    try {
+        enderecoCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    } catch (erro) {
+        msgCep.textContent = "CEP inválido!";
+        return;
+    }
+
+    msgCep.textContent = "";
+
+    enderecoCep = await enderecoCep.json();
+    logradouro.value = enderecoCep.logradouro;
+    bairro.value = enderecoCep.bairro;
+    cidade.value = enderecoCep.localidade;
+    estado.value = enderecoCep.estado;
+}
+
+cep.addEventListener("focusout", () => {
+    consultarCEP(cep.value);
+});
+
 // Essa checagem já é feita pelo required no HTML, mas é bom garantir
 function validarObrigatorios() {
     const obrigatorios = [
@@ -55,17 +77,21 @@ function validarComprimentoNome(nome) {
     }
 }
 
+// O input tipo date cuida da formatação de data, mas não dá pra escolher o formato.
+// O formato do formulário depende do fuso horário do navegador, e o formato
+//  do valor em si vem como YYYY-MM-DD.
+// Mas não tem problema já que da pra converter com o Moment na hora do cadastro.
 function validarData(data) {
     const dataMoment = moment(data);
     if (!dataMoment.isValid()) throw new Error("Data inválida!");
-
-    console.log(dataMoment);
 
     if (dataMoment.isBefore("1900-01-01"))
         throw new Error("Data de nascimento deve ser após 01/01/1900!");
 
     if (dataMoment.isAfter(moment()))
         throw new Error("Data de nascimento não pode ser no futuro!");
+
+    console.log("Data válida!");
 }
 
 form.addEventListener("submit", (event) => {
