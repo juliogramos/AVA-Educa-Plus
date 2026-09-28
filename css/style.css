@@ -56,6 +56,11 @@ h6 {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
 }
 
+.border-default {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+}
+
 /* COMPONENTES */
 .row-center {
     display: flex;
