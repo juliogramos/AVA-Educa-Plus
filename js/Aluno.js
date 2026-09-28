@@ -1,20 +1,20 @@
 export class Aluno {
     // id é número inteiro, o resto é string
 
-    #id; // Definido fora da classe
-    #nome;
-    #genero; // Masculino, Feminino, Outro
-    #dataNascimento;
-    #cpf;
-    #telefone;
-    #email;
-    #cep;
-    #cidade;
-    #estado;
-    #logradouro;
-    #numero; // String
-    #complemento;
-    #bairro;
+    #id; // Numérico, definido fora da classe
+    #nome; // String
+    #genero; // String, Masculino Feminino ou Outro
+    #dataNascimento; // String formatado pelo Moment
+    #cpf; // Numérico
+    #telefone; // Numérico
+    #email; // String, validação pelo input
+    #cep; // Numérico
+    #cidade; // String
+    #estado; // String
+    #logradouro; // String
+    #numero; // Numérico
+    #complemento; // String
+    #bairro; // String
 
     constructor(
         nome,

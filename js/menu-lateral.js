@@ -10,11 +10,14 @@ function criarBotaoNaNav(texto, func, desabilitado, nav) {
 function criaMenuLateral() {
     const container = document.getElementsByClassName("container")[0];
 
+    // Div do menu (semântico)
     const menuLateral = document.createElement("aside");
     menuLateral.classList.add("shadow-default");
 
+    // Nav que vai conter a lista de botões (semântico)
     const nav = document.createElement("nav");
 
+    // Criação de botões
     criarBotaoNaNav(
         "Dashboard",
         () => navigation.navigate("../dashboard/dashboard.html"),
