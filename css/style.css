@@ -210,3 +210,40 @@ aside button:last-child {
 .cor-destaque {
     color: var(--color-accent);
 }
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    /* Layout */
+    .layout-default {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cabeçalho */
+    header {
+        padding: var(--space-single) var(--space-double);
+    }
+
+    header h2 {
+        font-size: 25px;
+    }
+
+    header .user-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    header .user-icon svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    /* Menu Lateral */
+    aside {
+        margin-bottom: var(--space-quadruple);
+    }
+
+    aside button {
+        font-size: 18px;
+        padding: var(--space-single) var(--space-double);
+    }
+}

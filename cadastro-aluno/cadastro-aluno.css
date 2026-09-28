@@ -73,3 +73,11 @@ form {
 .submit-button:focus {
     outline-color: var(--color-tertiary);
 }
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    /* FORMULÁRIO */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
