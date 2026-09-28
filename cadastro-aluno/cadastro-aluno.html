@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AVA-Educa+</title>
+
+        <!-- Importação de fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./cadastro-aluno.css" />
+
+        <!-- Scripts para incluir os ícones Lucide -->
+        <!-- O createIcons vai ser chamado em diferentes scripts -->
+        <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
+
+        <!-- Inserir menu lateral e cabeçalho dinâmicamente -->
+        <!-- PRECISA estar abaixo da declaração do Lucide! -->
+        <script src="../js/cabecalho.js" defer></script>
+        <script src="../js/menu-lateral.js" defer></script>
+
+        <!-- Moment para validar as datas -->
+        <!-- Vai ser usado em cadastro-aluno.js incluído no fim do body -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.31.0/moment.min.js"
+            integrity="sha512-iJIt5wigccZYA4F3G8kWt8H0r43JDWpvBweaGct6QsveuU4zmyP6VX2EXMfSfA/Z80b1PfHUNLioFfY1Z55cCg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </head>
+    <body>
+        <!-- Cabeçalho inserido dinâmicamente aqui -->
+
+        <div class="container">
+            <!-- Barra lateral inserida dinâmicamente aqui -->
+
+            <main class="shadow-default">
+                <h1>Cadastro de Alunos</h1>
+                <form>
+                    <div class="form-grid">
+                        <fieldset class="form-column">
+                            <legend>Dados Básicos</legend>
+
+                            <div class="input-div">
+                                <label for="nome"
+                                    ><span class="required">* </span>Nome
+                                    Completo:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    id="nome"
+                                    required
+                                    minlength="4"
+                                    maxlength="80"
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="genero"
+                                    ><span class="required">* </span>Gênero:
+                                </label>
+                                <select name="genero" id="genero" required>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="input-div">
+                                <label for="data"
+                                    ><span class="required">* </span>Data de
+                                    Nascimento:
+                                </label>
+                                <input
+                                    type="date"
+                                    name="data"
+                                    id="data"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="cpf"
+                                    ><span class="required">* </span>CPF:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="cpf"
+                                    id="cpf"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="telefone"
+                                    ><span class="required">* </span>Telefone:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="telefone"
+                                    id="telefone"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="email"
+                                    ><span class="required">* </span>Email:
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="cep"
+                                    ><span class="required">* </span>CEP:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="cep"
+                                    id="cep"
+                                    required
+                                />
+                            </div>
+
+                            <p id="msg-cep" class="cor-terciaria"></p>
+                        </fieldset>
+
+                        <fieldset class="form-column">
+                            <legend>Endereço</legend>
+
+                            <div class="input-div">
+                                <label for="cidade"
+                                    ><span class="required">* </span>Cidade:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="cidade"
+                                    id="cidade"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="estado"
+                                    ><span class="required">* </span>Estado:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="estado"
+                                    id="estado"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="logradouro"
+                                    ><span class="required">* </span>Logradouro:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="logradouro"
+                                    id="logradouro"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="numero"
+                                    ><span class="required">* </span>Número:
+                                </label>
+                                <input
+                                    type="number"
+                                    name="numero"
+                                    id="numero"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="complemento">Complemento: </label>
+                                <input
+                                    type="text"
+                                    name="complemento"
+                                    id="complemento"
+                                />
+                            </div>
+
+                            <div class="input-div">
+                                <label for="bairro"
+                                    ><span class="required">* </span>Bairro:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="bairro"
+                                    id="bairro"
+                                    required
+                                />
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <p id="msg"></p>
+
+                    <button type="submit" class="submit-button">Salvar</button>
+                </form>
+            </main>
+        </div>
+
+        <!-- Script para a validação e envio do formulário -->
+        <script type="module" src="./cadastro-aluno.js"></script>
+    </body>
+</html>
