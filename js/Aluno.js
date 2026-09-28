@@ -17,7 +17,6 @@ export class Aluno {
     #bairro;
 
     constructor(
-        id,
         nome,
         genero,
         dataNascimento,
@@ -32,7 +31,6 @@ export class Aluno {
         complemento,
         bairro,
     ) {
-        this.#id = id;
         this.#nome = nome;
         this.#genero = genero;
         this.#dataNascimento = dataNascimento;
@@ -48,8 +46,13 @@ export class Aluno {
         this.#bairro = bairro;
     }
 
+    setId(id) {
+        this.#id = id;
+    }
+
     // Isso não vai ser utilizado no site, é só pra debugar
     logInfo() {
+        console.log(`ID: ${this.#id}`);
         console.log(`Nome: ${this.#nome}`);
         console.log(`Gênero: ${this.#genero}`);
         console.log(`Data de Nascimento: ${this.#dataNascimento}`);
