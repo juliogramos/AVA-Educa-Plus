@@ -47,11 +47,6 @@ h6 {
     color: var(--color-secondary);
 }
 
-.container {
-    margin: 0 auto;
-    max-width: var(--max-width);
-}
-
 .shadow-default {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
 }
@@ -59,14 +54,6 @@ h6 {
 .border-default {
     border: 2px solid var(--color-primary);
     border-radius: var(--border-radius);
-}
-
-/* COMPONENTES */
-.row-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-single);
 }
 
 #spinner {
@@ -86,7 +73,8 @@ h6 {
 }
 
 /* LAYOUTS COMUNS */
-.main-centro {
+
+.tela-centralizada {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -97,8 +85,27 @@ h6 {
     gap: var(--space-double);
 }
 
-.index h1 {
+.container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.layout-default {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: var(--space-quadruple);
+    margin-top: var(--space-double);
+}
+
+.layout-default main {
+    padding: var(--space-double);
+    background-color: white;
+}
+
+.layout-default h1 {
     text-align: center;
+    margin: var(--space-single);
 }
 
 /* CABEÇALHO */

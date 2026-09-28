@@ -17,29 +17,6 @@
     --space-quadruple: 32px;
 }
 
-/* LAYOUT */
-.container {
-    max-width: var(--max-width);
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: var(--space-quadruple);
-    margin-top: var(--space-double);
-}
-
-.container li {
-    list-style: none;
-}
-
-main {
-    padding: var(--space-double);
-    background-color: white;
-}
-
-h1 {
-    text-align: center;
-    margin: var(--space-single);
-}
-
 /* FORMULÁRIO */
 .required {
     color: var(--color-tertiary);
