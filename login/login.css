@@ -21,8 +21,6 @@ h1 {
 }
 
 .login-card {
-    border: 2px solid var(--color-secondary);
-    border-radius: var(--border-radius);
     padding: var(--space-double);
     max-width: 300px;
     width: 100%;
