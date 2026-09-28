@@ -1,3 +1,6 @@
+import { Aluno } from "../js/Aluno.js";
+import { gerarId } from "../dados/listagem-alunos.js";
+
 const form = document.querySelector("form");
 
 const nome = document.getElementById("nome");
@@ -105,4 +108,26 @@ form.addEventListener("submit", (event) => {
         msg.textContent = erro.message;
         return;
     }
+
+    const dataFormatada = moment(data.value).format("DD/MM/YYYY");
+    const novoId = gerarId();
+
+    const novoAluno = new Aluno(
+        novoId,
+        nome.value,
+        genero.value,
+        dataFormatada,
+        cpf.value,
+        telefone.value,
+        email.value,
+        cep.value,
+        cidade.value,
+        estado.value,
+        logradouro.value,
+        numero.value,
+        complemento.value,
+        bairro.value,
+    );
+
+    novoAluno.logInfo();
 });
