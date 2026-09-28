@@ -110,10 +110,8 @@ form.addEventListener("submit", (event) => {
     }
 
     const dataFormatada = moment(data.value).format("DD/MM/YYYY");
-    const novoId = gerarId();
 
     const novoAluno = new Aluno(
-        novoId,
         nome.value,
         genero.value,
         dataFormatada,

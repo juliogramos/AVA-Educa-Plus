@@ -60,10 +60,3 @@ export function listarAlunos() {
         console.log("----------");
     });
 }
-
-let novoId = 2;
-
-export function gerarId() {
-    novoId++;
-    return novoId;
-}
