@@ -1,5 +1,6 @@
+import { listarAlunos } from "../dados/listagem-alunos.js";
 import { Aluno } from "../js/Aluno.js";
-import { gerarId } from "../dados/listagem-alunos.js";
+import { cadastrarAluno } from "../js/alunos.js";
 
 const form = document.querySelector("form");
 
@@ -20,13 +21,16 @@ const bairro = document.getElementById("bairro");
 
 const msg = document.getElementById("msg");
 const msgCep = document.getElementById("msg-cep");
+let cepValido = false;
 
 async function consultarCEP(cep) {
     let enderecoCep;
     try {
         enderecoCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        cepValido = true;
     } catch (erro) {
         msgCep.textContent = "CEP inválido!";
+        cepValido = false;
         return;
     }
 
@@ -97,17 +101,30 @@ function validarData(data) {
     console.log("Data válida!");
 }
 
-form.addEventListener("submit", (event) => {
+// Quando o usuário clicar no botão salvar, o campo de CEP vai ser obrigatoriamente
+//  tirado de foco, o que garante que a variável cepValido vai ser setada
+function validarCep() {
+    if (!cepValido) {
+        throw new Error("CEP inválido");
+    }
+
+    console.log("CEP validado!");
+}
+
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try {
         validarObrigatorios();
         validarComprimentoNome(nome.value);
         validarData(data.value);
+        validarCep();
     } catch (erro) {
         msg.textContent = erro.message;
         return;
     }
+
+    msg.textContent = "";
 
     const dataFormatada = moment(data.value).format("DD/MM/YYYY");
 
@@ -127,5 +144,15 @@ form.addEventListener("submit", (event) => {
         bairro.value,
     );
 
-    novoAluno.logInfo();
+    let resultado;
+
+    try {
+        resultado = await cadastrarAluno(novoAluno);
+    } catch (erro) {
+        resultado = erro;
+    } finally {
+        alert(resultado);
+
+        listarAlunos();
+    }
 });
