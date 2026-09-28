@@ -41,8 +41,14 @@ async function consultarCEP(cep) {
     bairro.value = enderecoCep.bairro;
     cidade.value = enderecoCep.localidade;
     estado.value = enderecoCep.estado;
+    // O retorno do ViaCEP também possui um campo de complemento, mas ele é
+    //  bem geral então deixei sem preenchimento para que o usuário possa
+    //  preencher com algo mais personalizado para ele.
 }
 
+// Quando o usuário clicar no botão salvar, o campo de CEP vai ser obrigatoriamente
+//  tirado de foco, o que garante que a variável cepValido vai ser setada pela
+//  função consultarCEP
 cep.addEventListener("focusout", () => {
     consultarCEP(cep.value);
 });
@@ -64,7 +70,9 @@ function validarObrigatorios() {
         bairro,
     ].map((campo) => campo.value);
 
-    const temFaltantes = obrigatorios.every(
+    console.log(obrigatorios);
+
+    const temFaltantes = obrigatorios.some(
         (valor) => valor == undefined || valor == null || valor == "",
     );
 
@@ -101,8 +109,6 @@ function validarData(data) {
     console.log("Data válida!");
 }
 
-// Quando o usuário clicar no botão salvar, o campo de CEP vai ser obrigatoriamente
-//  tirado de foco, o que garante que a variável cepValido vai ser setada
 function validarCep() {
     if (!cepValido) {
         throw new Error("CEP inválido");
@@ -146,6 +152,9 @@ form.addEventListener("submit", async (event) => {
 
     let resultado;
 
+    // Não é para dar erro já que as validações são todas feitas nesse script,
+    //  mas o cadastrarAluno deve ter uma possibilidade de erro para que
+    //  retorne o promise reject. Então inventei um erro (que nunca será acionado)
     try {
         resultado = await cadastrarAluno(novoAluno);
     } catch (erro) {
@@ -153,6 +162,7 @@ form.addEventListener("submit", async (event) => {
     } finally {
         alert(resultado);
 
+        // Para debugar
         listarAlunos();
     }
 });

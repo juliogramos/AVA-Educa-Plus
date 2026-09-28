@@ -5,8 +5,9 @@ let proximoId = 3;
 
 export function cadastrarAluno(aluno) {
     return new Promise((resolve, reject) => {
-        // Não sei qual erro pode dar, mas o enunciado diz que pode dar erro
-        //  então inventei um erro
+        // Nunca vai acontecer um erro já que as validações são feitas fora
+        //  dessa função, mas o enunciado diz que pode dar erro então inventei um erro
+        //  (que também nunca vai ser acionado)
         try {
             if (!(aluno instanceof Aluno))
                 throw new Error("Função não recebeu um aluno!");
