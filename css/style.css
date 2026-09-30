@@ -1,0 +1,249 @@
+:root {
+    /* Paleta de cores */
+    /* Obtida de: https://www.iamsajid.com/colors/ */
+    --color-primary: hsl(70, 50%, 90%);
+    --color-secondary: hsl(70, 50%, 10%);
+    --color-tertiary: hsl(10, 80%, 20%);
+    --color-accent: hsl(130, 80%, 20%);
+
+    /* Medidas padrão */
+    --max-width: 1400px;
+    --border-radius: 24px;
+    --header-height: 50px;
+
+    --space-half: 4px;
+    --space-single: 8px;
+    --space-double: 16px;
+    --space-triple: 24px;
+    --space-quadruple: 32px;
+}
+
+/* ESTILOS PRINCIPAIS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline-color: var(--color-accent);
+}
+
+body {
+    background: linear-gradient(0deg, #fff 70%, var(--color-primary) 100%);
+    background-repeat: no-repeat;
+    color: var(--color-secondary);
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "DM Serif Display", serif;
+    color: var(--color-secondary);
+}
+
+.shadow-default {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.border-default {
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+}
+
+#spinner {
+    animation: rotate 3s linear infinite;
+    width: 30px;
+    height: auto;
+    color: var(--color-accent);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* LAYOUTS COMUNS */
+
+.tela-centralizada {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-double);
+    padding-top: var(--space-quadruple);
+    gap: var(--space-double);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+
+.layout-default {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: var(--space-quadruple);
+    margin-top: var(--space-double);
+}
+
+.layout-default main {
+    padding: var(--space-double);
+    background-color: white;
+}
+
+.layout-default h1 {
+    text-align: center;
+    margin: var(--space-single);
+}
+
+/* CABEÇALHO */
+header {
+    background-color: white;
+    border-bottom: 1px solid var(--color-secondary);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--space-single) var(--space-quadruple);
+}
+
+header h2 {
+    font-size: 30px;
+    color: var(--color-accent);
+}
+
+header .user-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-single);
+    align-items: center;
+}
+
+header .user-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-accent);
+}
+
+header .user-icon svg {
+    height: 40px;
+    width: 40px;
+}
+
+/* MENU LATERAL */
+aside {
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+aside nav {
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+aside button {
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+aside button:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+aside button:disabled {
+    background-color: white;
+    cursor: default;
+}
+
+aside button:disabled:hover {
+    background-color: white;
+    color: #717171;
+}
+
+aside button:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+aside button:last-child {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+/* CORES PARA TEXTO */
+.cor-primaria {
+    color: var(--color-primary);
+}
+
+.cor-secundaria {
+    color: var(--color-secondary);
+}
+
+.cor-terciaria {
+    color: var(--color-tertiary);
+}
+
+.cor-destaque {
+    color: var(--color-accent);
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    /* Layout */
+    .layout-default {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cabeçalho */
+    header {
+        padding: var(--space-single) var(--space-double);
+    }
+
+    header h2 {
+        font-size: 25px;
+    }
+
+    header .user-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    header .user-icon svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    /* Menu Lateral */
+    aside {
+        margin-bottom: var(--space-quadruple);
+    }
+
+    aside button {
+        font-size: 18px;
+        padding: var(--space-single) var(--space-double);
+    }
+}

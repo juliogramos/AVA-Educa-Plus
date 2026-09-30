@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AVA-Educa+</title>
+
+        <!-- Importação de fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./dashboard.css" />
+
+        <!-- Scripts para incluir os ícones Lucide -->
+        <!-- O createIcons vai ser chamado em diferentes scripts -->
+        <script src="https://unpkg.com/lucide@1.14.0/dist/umd/lucide.js"></script>
+
+        <!-- Inserir menu lateral e cabeçalho dinâmicamente -->
+        <!-- PRECISA estar abaixo da declaração do Lucide! -->
+        <script src="../js/cabecalho.js" defer></script>
+        <script src="../js/menu-lateral.js" defer></script>
+
+        <!-- Moment para formatar as datas igual ao AVA -->
+        <!-- Vai ser usado em dashboard.js incluído no fim do body -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.31.0/moment.min.js"
+            integrity="sha512-iJIt5wigccZYA4F3G8kWt8H0r43JDWpvBweaGct6QsveuU4zmyP6VX2EXMfSfA/Z80b1PfHUNLioFfY1Z55cCg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </head>
+    <body>
+        <!-- Cabeçalho inserido dinâmicamente aqui -->
+
+        <div class="container layout-default">
+            <!-- Barra lateral inserida dinâmicamente aqui -->
+
+            <main class="shadow-default border-default">
+                <h1>Meus Cursos</h1>
+                <section id="card-container"></section>
+            </main>
+        </div>
+
+        <!-- Script para fazer os cards -->
+        <script src="./dashboard.js" type="module"></script>
+    </body>
+</html>

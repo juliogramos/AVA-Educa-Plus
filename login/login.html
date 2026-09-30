@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AVA-Educa+</title>
+
+        <!-- Importação de fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Estilos -->
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="./login.css" />
+    </head>
+    <body>
+        <main class="tela-centralizada">
+            <div class="login-card shadow-default border-default">
+                <form>
+                    <h1>Entrar</h1>
+
+                    <div class="form-row">
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="senha">Senha: </label>
+                        <input
+                            type="password"
+                            name="senha"
+                            id="senha"
+                            required
+                        />
+                    </div>
+
+                    <p id="erro" class="cor-terciaria"></p>
+
+                    <div class="form-row">
+                        <button type="submit">Entrar</button>
+                        <a href="#" id="esqueceu-senha">Esqueceu sua senha?</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src="login.js" type="module"></script>
+    </body>
+</html>
